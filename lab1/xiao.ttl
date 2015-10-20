@@ -1,0 +1,107 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@base <http://www.ghxiao.org/> .
+
+<#me>
+        rdf:type                foaf:Person ;
+        foaf:name               "Guohui Xiao" ;
+        foaf:title              "PhD" ;
+        foaf:givenname          "Guohui" ;
+        foaf:family_name        "Xiao" ;
+        foaf:homepage           <http://www.ghxiao.org/> ;
+        foaf:depiction          <http://www.ghxiao.org/images/xiao.jpg> ;
+#        foaf:phone              <tel:+43-(1)-58-801-18428> ;
+        foaf:workplaceHomepage  <http://www.unibz.it/en/inf/welcome/default.html> .
+#        foaf:workInfoHomepage   <http://www.kr.tuwien.ac.at/staff/xiao> .
+
+
+
+#<#me>      foaf:currentProject  _:b0 .
+#        
+#_:b0    rdf:type  foaf:Project .
+#_:b0    foaf:homepage  <http://optique-project.eu/> .
+
+
+<#me>   foaf:currentProject  [
+            rdf:type  foaf:Project ;
+            foaf:homepage  <http://optique-project.eu/> 
+        ] .
+
+
+
+<#me>   foaf:knows  _:b1 .
+_:b1    rdf:type  foaf:Person .
+_:b1    foaf:name      "Thomas Eiter" ;
+        foaf:homepage  <http://www.kr.tuwien.ac.at/staff/eiter/> .
+        
+<#me> foaf:knows [
+    rdf:type foaf:Person ;
+    foaf:name "Diego Calvanese" ;
+    foaf:homepage <https://www.inf.unibz.it/~calvanese/>
+] .        
+        
+<#me> foaf:knows [
+    rdf:type foaf:Person ;
+    foaf:name "Enrico Franconi" ;
+    foaf:homepage <http://www.inf.unibz.it/~franconi/>
+] .        
+
+
+_:b2    rdf:type  foaf:Person .
+
+<#me>
+        foaf:knows  _:b2 .
+
+_:b2    foaf:name     "Stijn Heymans" ;
+        rdfs:seeAlso  <http://tinf2.vub.ac.be/~sheymans/foaf.rdf> .
+
+<http://www.aifb.uni-karlsruhe.de/Personen/viewPersonOWL/id2084instance>
+        rdf:type  foaf:Person .
+
+<#me>
+        foaf:knows  <http://www.aifb.uni-karlsruhe.de/Personen/viewPersonOWL/id2084instance> .
+
+<http://www.aifb.uni-karlsruhe.de/Personen/viewPersonOWL/id2084instance>
+        foaf:name     "Pascal Hitzler" ;
+        rdfs:seeAlso  <http://www.aifb.uni-karlsruhe.de/Personen/viewPersonFOAF/foaf_2084.rdf> .
+
+<http://www.wfaber.com/foaf.rdf#me>
+        rdf:type  foaf:Person .
+
+<#me>
+        foaf:knows  <http://www.wfaber.com/foaf.rdf#me> .
+
+<http://www.wfaber.com/foaf.rdf#me>
+        foaf:name     "Wolfgang Faber" ;
+        rdfs:seeAlso  <http://www.wfaber.com/foaf.rdf#me> .
+
+<http://www.postsubmeta.net/foaf.rdf#TK>
+        rdf:type  foaf:Person .
+
+<#me>
+        foaf:knows  <http://www.postsubmeta.net/foaf.rdf#TK> .
+
+<http://www.postsubmeta.net/foaf.rdf#TK>
+        foaf:name     "Thomas Krennwallner" ;
+        rdfs:seeAlso  <http://www.postsubmeta.net/foaf.rdf> .
+
+<http://www.polleres.net/foaf.rdf#me>
+        rdf:type  foaf:Person .
+
+<#me>
+        foaf:knows  <http://www.polleres.net/foaf.rdf#me> .
+
+<http://www.polleres.net/foaf.rdf#me>
+        foaf:name     "Axel Polleres" ;
+        rdfs:seeAlso  <http://www.polleres.net/foaf.rdf#me> .
+
+<http://web.student.tuwien.ac.at/~e0928102/Files/foaf.rdf#Keaw>
+        rdf:type  foaf:Person .
+
+<#me>
+        foaf:knows  <http://web.student.tuwien.ac.at/~e0928102/Files/foaf.rdf#Keaw> .
+
+<http://web.student.tuwien.ac.at/~e0928102/Files/foaf.rdf#Keaw>
+        foaf:name     "Worarat Krathu" ;
+        rdfs:seeAlso  <http://web.student.tuwien.ac.at/~e0928102/Files/foaf.rdf#Keaw> .
