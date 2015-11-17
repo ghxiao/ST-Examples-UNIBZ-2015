@@ -1,0 +1,42 @@
+@prefix : <http://example.org/term/> .
+@prefix i: <http://example.org/inst/> .
+@prefix rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:	<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+:Museum rdfs:subClassOf :TourismAttraction .
+
+:ArtMeseum rdfs:subClassOf :Museum .
+
+:ModernArtMuseum rdfs:subClassOf :ArtMeseum .
+
+:Landmark rdfs:subClassOf :TourismAttraction .
+
+:OutdoorSpot rdfs:subClassOf :TourismAttraction .
+
+:AmusementPark rdfs:subClassOf :TourismAttraction .
+
+:Restaurant rdfs:subClassOf :TourismObject .
+
+:Hotel rdfs:subClassOf :TourismObject .
+
+:TourismAttraction rdfs:subClassOf :TourismObject .
+
+# Only tourism objects can have a TripAdvisor rating. 
+:hasTripAdvisorRating rdfs:domain :TourismObject .
+
+# Each has TripAdvisor rating is a has rating.
+:hasTripAdvisorRating rdfs:subPropertyOf :hasRating .
+
+i:Museion rdf:type :ModernArtMuseum .
+
+i:Museion :location i:Bolzano .
+
+# The TripAdvisor rating of Chicken Hut is 3.5.
+i:ChickenHut :hasTripAdvisorRating "3.5"^^xsd:decimal .
+
+:hasRating a owl:DatatypeProperty.
+:hasTripAdvisorRating a owl:DatatypeProperty.
+:location a owl:ObjectProperty.
+
