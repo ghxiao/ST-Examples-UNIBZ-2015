@@ -4,6 +4,18 @@
 triple(Y, "rdf:type", X) :- triple(A, "rdfs:domain", X),
 							triple(Y, A, Z).
 
+
+% A -> ":hasTripAdvisorRating"
+% X -> ":TourismObject"
+% Y -> "i:ChickenHut"
+% Z -> "3.5"
+
+
 triple(":hasTripAdvisorRating", "rdfs:domain", ":TourismObject").
 
 triple("i:ChickenHut", ":hasTripAdvisorRating", "3.5") .
+
+%% output
+% {triple(":hasTripAdvisorRating","rdfs:domain",":TourismObject"), 
+% triple("i:ChickenHut","rdf:type",":TourismObject"),
+% triple("i:ChickenHut",":hasTripAdvisorRating","3.5")}
