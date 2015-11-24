@@ -1,0 +1,6 @@
+% rule
+animal(X) :- person(X).
+
+% fact
+
+person(tom).
